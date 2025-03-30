@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pojok Berita | HIMASISKO UNSRI</title>
+    <link rel="icon" href="assets/image/title.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/berita.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="header-navbar">
+        <nav class="nav container-navbar">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/image/logohima-removebg-preview.png" alt="Logo HIMASISKO"> HIMASISKO UNSRI
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Beranda</a></li>
+                    <li><a href="about.html" class="nav__link">Tentang Kami</a></li>
+                    <li><a href="profil.html" class="nav__link">Profil Anggota</a></li>
+                    <li class="dropdown__item">
+                        <a href="#" class="nav__link">
+                            See More <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li><a href="beritahima.html" class="dropdown__link active"><i class="ri-newspaper-line"></i> Pojok Berita</a></li>
+                            <li><a href="recruitment.html" class="dropdown__link"><i class="ri-book-open-line"></i> Recruitment</a></li>
+                            <li><a href="#" class="dropdown__link"><i class="ri-archive-stack-line"></i> coming soon</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__burger"></i>
+                <i class="ri-close-line nav__close"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="news-header">
+        <h1>Pojok Berita HIMASISKO</h1>
+        <p>Update terbaru seputar kegiatan, prestasi, dan informasi dari HIMASISKO UNSRI</p>
+        <div class="breadcrumb">
+            <a href="index.html">Beranda</a> &gt; 
+            <span>Pojok Berita</span>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="news-container">
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Cari berita...">
+            <button id="search-btn"><i class='bx bx-search'></i></button>
+        </div>
+        
+        <!-- Filters -->
+        <div class="news-filters">
+            <button class="filter-btn active" data-category="all">Semua</button>
+            <button class="filter-btn" data-category="kegiatan">Kegiatan</button>
+            <button class="filter-btn" data-category="prestasi">Prestasi</button>
+            <button class="filter-btn" data-category="pengumuman">Pengumuman</button>
+            <button class="filter-btn" data-category="event">Event</button>
+        </div>
+        
+        <!-- News Grid -->
+        <div class="news-grid" id="news-grid">
+            <!-- Berita akan dimuat oleh JavaScript -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="news-pagination" id="pagination">
+            <!-- Pagination akan di-generate oleh JavaScript -->
+        </div>
+    </main>
+
+    <!-- Import JavaScript -->
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/berita.js"></script>
+</body>
+</html>

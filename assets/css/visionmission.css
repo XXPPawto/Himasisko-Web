@@ -1,0 +1,166 @@
+/* Vision Mission Section Styles */
+.vision-mission {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #D84040 0%, #a83232 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-mission::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.vm-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.vm-tabs {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+}
+
+.vm-tab {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.vm-tab.active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.vm-tab.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: white;
+}
+
+.vm-tab:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.vm-content {
+  flex: 1;
+  padding: 3rem;
+}
+
+.vm-item {
+  display: none;
+}
+
+.vm-item.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.vm-icon {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.vm-item h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.vm-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: white;
+}
+
+.vm-item p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.mission-list {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-list li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.mission-list li i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vm-wrapper {
+    flex-direction: column;
+  }
+  
+  .vm-tabs {
+    width: 100%;
+    display: flex;
+    padding: 0;
+  }
+  
+  .vm-tab {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .vm-tab.active::before {
+    width: 100%;
+    height: 4px;
+    top: auto;
+    bottom: 0;
+  }
+  
+  .vm-content {
+    padding: 2rem;
+  }
+}

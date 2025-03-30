@@ -1,0 +1,68 @@
+/* Section Mengenal HIMASISKO Styles */
+.mengenal-himasisko {
+  padding: 100px 0;
+  background: #D64B48; /* Warna merah */
+  color: #fff;
+}
+
+.mengenal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mengenal-left {
+  max-width: 600px;
+}
+
+.mengenal-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mengenal-left h2 .highlight {
+  color:rgb(255, 255, 255); /* Warna kuning untuk highlight */
+}
+
+.mengenal-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.mengenal-left .btn a {
+  text-decoration: none;
+  color: #fff;
+  background:rgb(40, 40, 40); /* Warna kuning untuk tombol */
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.mengenal-left .btn a:hover {
+  background:rgb(0, 0, 0); /* Warna kuning lebih gelap saat hover */
+}
+
+.mengenal-right img {
+  max-width: 500px; /* Sesuaikan ukuran foto */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Section */
+@media (max-width: 768px) {
+  .mengenal-wrapper {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .mengenal-left {
+      margin-bottom: 2rem;
+  }
+
+  .mengenal-right img {
+      max-width: 100%; /* Foto menyesuaikan lebar layar di mobile */
+  }
+}
